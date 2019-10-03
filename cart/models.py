@@ -45,22 +45,3 @@ class OrderUpdate(models.Model):
     def __str__(self):
         return self.update_desc[0:7] + "..."
         
-"""
-class Watch(models.Model):
-    watch_id=models.AutoField
-    watch_name=models.CharField(max_length=50,default="")
-    watch_price=models.CharField(max_length=20,default="0")
-    watch_pic=models.ImageField(upload_to='images/',blank=True)
-
-    def __str__(self):
-        return self.watch_name
-
-class Shirt(models.Model):
-    shirt_id=models.AutoField
-    shirt_name=models.CharField(max_length=50,default="")
-    shirt=models.CharField(max_length=20,default="0")
-    shirt_pic=models.ImageField(upload_to='images/',blank=True)
-
-    def __str__(self):
-        return self.shirt_name
-"""
