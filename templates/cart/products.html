@@ -1,0 +1,132 @@
+{% extends "cart/base.html" %}
+{% load static %}
+{% block title_block %}
+   <title>Products | Life Style Store</title>
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block body_block %}
+
+
+<div class="container" id="content">
+
+          <!-- Jumbotron Header -->
+          <div class="jumbotron home-spacer" id="products-jumbotron">
+              <h1>Welcome to our Lifestyle Store!</h1>
+              <p>We have the best cameras, watches and shirts for you. No need to hunt around, we have all in one place.</p>
+
+          </div>
+          <hr>
+
+          <div class="row text-center" id="products">
+            {% for i in product %}
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src='/media/{{i.product_pic}}' alt="">
+                      <div class="caption">
+                          <h3 id="namepr{{i.id}}">{{i.product_name}} </h3>
+                          <p id="pricepr{{i.id}}">Price: Rs. {{i.product_price}}</p>
+                          <span id="divpr{{i.id}}" class="divpr">
+                          <p><button class="btn btn-primary btn-block cart" id="pr{{i.id}}">Add to cart</button></p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+<!--
+          <div class="row text-center" id="watches">
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/18.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>Titan Model #301 </h3>
+                          <p>Price: Rs. 13000.00 </p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/19.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>Titan Model #201</h3>
+                          <p>Price: Rs. 3000.00 </p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/20.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>HMT Milan</h3>
+                          <p>Price: Rs. 8000.00 </p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/21.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>Faber Luba #111 </h3>
+                          <p>Price: Rs. 18000.00 </p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row text-center" id="shirts">
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/22.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>H&W </h3>
+                          <p>Price: Rs. 800.00 </p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/23.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>Luis Phil</h3>
+                          <p>Price: Rs. 1000.00</p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/24.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>John Zok</h3>
+                          <p>Price: Rs. 1500.00</p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 home-feature">
+                  <div class="thumbnail">
+                      <img src="{% static 'img/25.jpg' %}" alt="">
+                      <div class="caption">
+                          <h3>Jhalsani</h3>
+                          <p>Price Rs. 1300.00</p>
+                          <p><a href="{% url 'cart:cart' %}" role="button" class="btn btn-primary btn-block" id="addtocart">Add to cart</a></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <hr>
+      </div>
+      -->
+{% endblock %}
