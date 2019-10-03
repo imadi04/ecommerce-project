@@ -33,7 +33,6 @@
 {% block js %}
 <script>
   $(document).ready(function(){
-    console.log("kaam");
     $('#trackerForm').submit(function(event) {
     $('#items').empty();
     var formData = {
@@ -49,8 +48,6 @@
             encode: true
         })
         .done(function(data) {
-            console.log(data);
-            console.log(formData);
             updates = JSON.parse(data);
             console.log(updates);
             if (updates.length > 0 & updates != {}) {
@@ -75,3 +72,5 @@
   });
 </script>
 {% endblock %}
+<!-- Ajax is not working. Needs to be fixed.
+-->
