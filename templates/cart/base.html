@@ -38,10 +38,8 @@
               qty=1;
               console.log(idstr);
               name=document.getElementById('name'+ idstr).innerHTML;
-              price =document.getElementById('price'+ idstr).innerHTML;
-              x=parseInt(price.slice(11, ).replace(/,/g,''));
-              //console.log(x);
-              cart[idstr]=[qty,name,x];
+              price =parseInt(document.getElementById('price'+ idstr).innerHTML.replace(/,/g,''));
+              cart[idstr]=[qty,name,price];
           }
           updateCart(cart);
           //document.getElementById('itemid').innerHTML="<p>hi</p>";
